@@ -1,20 +1,19 @@
 import React from "react";
-import s from './Profile.module.css'
+import Post from './Post/Post.jsx'
+import s from './MyPosts.module.css'
 
-const MyPosts = () => {
+const MyPosts = (props) => {
   return (
   <div>
     My Posts
     <div>
-      New Post
+      <textarea></textarea>
+      <button>Add post</button>
+      <button>Remove</button>
     </div>
     <div className={s.posts}>
-      <div className={s.item}>
-        post 1
-      </div>
-      <div className={s.item}>
-        post 2
-      </div>
+      <Post message='Hi, how are you?' />
+      <Post message="It's my first post" />
     </div>
   </div>
   );

@@ -2,9 +2,9 @@ import React from "react";
 import BigImage from './../../images/big_image.jpg';
 import AvaImage from './../../images/ava_image.jpg';
 import MyPosts from './MyPosts/MyPosts'
-import s from './MyPosts.module.css'
+import s from './Profile.module.css'
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className={s.content}>
       <div>
