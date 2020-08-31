@@ -4,6 +4,10 @@
     text-align: center;
 }
 
-.item {
-    color: #fff;
+.item a {
+    color: #ffffff;
+}
+
+.item a.activeLink {
+    color: #11395c;
 }
