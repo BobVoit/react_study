@@ -3,5 +3,30 @@
     background-color: #e4fff8;
     margin-left: 5px;
     display: grid;
-    border: 1px solid  #000000;
+    border: 1px solid  #11395c;
 } 
+
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.dialogs_items{
+    padding: 10px;
+}
+
+.dialogs_items .active {
+    color: #ffd700;
+}
+
+.dialog {
+
+}
+
+.messages {
+    padding: 10px;
+}
+
+.message {
+
+}
