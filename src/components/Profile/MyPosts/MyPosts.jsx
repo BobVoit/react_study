@@ -4,14 +4,7 @@ import s from './MyPosts.module.css'
 
 const MyPosts = (props) => {
 
-  const posts = [
-    {id: 1, message: "Hi, how are you?", likesCount: 12},
-    {id: 2, message: "It's my first post", likesCount: 11},
-    {id: 3, message: "Gucci flip flap", likesCount: 11},
-    {id: 4, message: "I can study react!", likesCount: 11},
-  ];
-
-  const postsElements = posts.map( p => <Post message={p.message} likesCount={p.likesCount} />);
+  const postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount} />);
 
   return (
     <div className={s.posts_block}>

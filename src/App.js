@@ -10,17 +10,25 @@ import Music from './components/Music/Music.jsx';
 import Setting from './components/Setting/Setting.jsx';
 
 const App = (props) => {
+
+  const posts = [
+    { id: 1, message: "Hi, how are you?", likesCount: 12 },
+    { id: 2, message: "It's my first post", likesCount: 11 },
+    { id: 3, message: "Gucci flip flap", likesCount: 11 },
+    { id: 4, message: "I can study react!", likesCount: 11 },
+  ];
+
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navbar />
         <div className="app-wrapper-content">
-          <Route path="/dialogs" component={Dialogs} />
-          <Route path="/profile" component={Profile} />
-          <Route path="/news" component={News} />
-          <Route path="/music" component={Music} />
-          <Route path="/setting" component={Setting} />
+          <Route path="/dialogs" render={() => <Dialogs />} />
+          <Route path="/profile" render={() => <Profile posts={props.posts} />} />
+          <Route path="/news" render={() => <News />} />
+          <Route path="/music" render={() => <Music />} />
+          <Route path="/setting" render={() => <Setting />} />
         </div>
       </div>
     </BrowserRouter>
