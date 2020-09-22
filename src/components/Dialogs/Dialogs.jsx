@@ -2,8 +2,6 @@ import React from "react";
 import s from './Dialogs.module.css'
 import UserMessages from './Message/Message.jsx';
 import DialogItem from './DialogItem/DialogItem.jsx';
-import { Route } from "react-router-dom";
-
 
 const Dialogs = (props) => {
 

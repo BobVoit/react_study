@@ -10,14 +10,6 @@ import Music from './components/Music/Music.jsx';
 import Setting from './components/Setting/Setting.jsx';
 
 const App = (props) => {
-
-  const posts = [
-    { id: 1, message: "Hi, how are you?", likesCount: 12 },
-    { id: 2, message: "It's my first post", likesCount: 11 },
-    { id: 3, message: "Gucci flip flap", likesCount: 11 },
-    { id: 4, message: "I can study react!", likesCount: 11 },
-  ];
-
   return (
     <BrowserRouter>
       <div className="app-wrapper">
