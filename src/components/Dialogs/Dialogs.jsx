@@ -5,7 +5,6 @@ import DialogItem from './DialogItem/DialogItem.jsx';
 import { updateNewMessageBodyCreator, sendMessageCreator } from "../../redux/state";
 
 const Dialogs = (props) => {
-
   let state = props.store.getState().dialogsPage;
 
   const dialogsElements = state.dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
@@ -38,7 +37,7 @@ const Dialogs = (props) => {
               placeholder="Enter your message">
             </textarea>
           </div>
-          <div><button onClick={ () => {onSendMessageClick}}>Send</button></div>
+          <div><button onClick={onSendMessageClick}>Send</button></div>
         </div>
       </div>
     </div>

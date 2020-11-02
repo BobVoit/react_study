@@ -79,7 +79,7 @@ export const sendMessageCreator = () => ({ type: SEND_MESSAGE});
 
 export const updateNewMessageBodyCreator = (text) => ({
   type: UPDATE_NEW_MESSAGE_BODY,
-  newText: text
+  body: text
 });
 
 

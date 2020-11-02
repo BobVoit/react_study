@@ -19,8 +19,8 @@ const App = (props) => {
           <Route path="/dialogs" render={() => <Dialogs store={props.store} />} />
           <Route path="/profile" render={() => 
             <Profile 
-              profilePage={props.state.profilePage} 
-              dispatch={props.dispatch} 
+              profilePage={props.store.getState().profilePage} 
+              dispatch={props.store.dispatch} 
             />} />
           <Route path="/news" render={() => <News />} />
           <Route path="/music" render={() => <Music />} />
