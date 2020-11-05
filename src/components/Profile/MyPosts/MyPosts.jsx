@@ -1,7 +1,7 @@
 import React from "react";
 import Post from './Post/Post.jsx'
 import s from './MyPosts.module.css'
-import {updateNewPostActionCreator, addPostActionCreator} from './../../../redux/state';
+import {updateNewPostActionCreator, addPostActionCreator} from './../../../redux/profileReducer';
 
 const MyPosts = (props) => {
   let state = props.store.getState().profilePage;
