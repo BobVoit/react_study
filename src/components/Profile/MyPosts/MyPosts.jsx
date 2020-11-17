@@ -4,7 +4,6 @@ import s from './MyPosts.module.css'
 
 
 const MyPosts = (props) => {
-  // let state = props.store.getState().profilePage;
 
   const postsElements = props.posts.map( p => <Post message={p.message} likesCount={p.likesCount} />  );
 
