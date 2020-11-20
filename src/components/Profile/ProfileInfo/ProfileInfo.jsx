@@ -11,8 +11,12 @@ const ProfileInfo = (props) => {
           <img className={s.big_image} src={BigImage} />
         </div>
         <div className={s.discripton_block}>
-          <div>{<img src={AvaImage} />}</div>
-          <div className={s.account_inf}></div>
+          <div>{<img src={props.profile.photos.large} />}</div>
+          <div className={s.account_inf}>
+            <div>{props.profile.fullName}</div>
+            <div>{props.profile.contacts.github}</div>
+            <div>{props.profile.lookingForAJob}</div>
+          </div>
         </div>
       </div>
     );
