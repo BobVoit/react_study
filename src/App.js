@@ -9,6 +9,7 @@ import News from './components/News/News.jsx';
 import Music from './components/Music/Music.jsx';
 import Setting from './components/Setting/Setting.jsx';
 import UsersContainer from './components/Users/UsersContainer';
+import LoginPage from './components/Login/Login';
 
 const App = (props) => {
   return (
@@ -23,6 +24,7 @@ const App = (props) => {
           <Route path="/music" render={() => <Music />} />
           <Route path="/setting" render={() => <Setting />} />
           <Route path="/users" render={() => <UsersContainer />} />
+          <Route path="/login" render={() => <LoginPage />} />
         </div>
       </div>
     </BrowserRouter>
