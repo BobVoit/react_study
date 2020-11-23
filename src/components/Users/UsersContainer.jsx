@@ -1,10 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { follow, unfollow, setCurrentPage, toggleIsFollowingProgress, getUsers } from "../../redux/usersReducer";
-import * as axios from "axios";
 import Users from './Users';
 import Preloader from '../common/Preloader/Preloader';
-import { usersAPI } from "../../api/api";
 import { withAuthRedirect } from "../../hoc/withAuthRedirect";
 import { compose } from "redux";
 
