@@ -1,12 +1,12 @@
 import React from "react";
 import s from './FormsControls.module.css';
 
-const FormsControl = ({input, meta, child, element, ...props}) => {
+const FormsControl = ({input, meta, ...props}) => {
     const hasError = meta.touched && meta.error;
     return (
         <div className={s.formControl + " " + (hasError ? s.error : "" )}>
             <div>
-                
+            {props.children}
             </div>
             { hasError && <span>{meta.error}</span> }
         </div>
@@ -19,7 +19,7 @@ export const Textarea = ({input, meta, ...props}) => {
     return (
         <div className={s.formControl + " " + (hasError ? s.error : "" )}>
             <div>
-                <textarea {...input} {...props} />
+                <textarea {...input} {...props}></textarea>
             </div>
             { hasError && <span>{meta.error}</span> }
         </div>
