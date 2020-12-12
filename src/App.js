@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Route, BrowserRouter, withRouter } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 import HeaderContainer from './components/Header/HeaderContainer';
 import Navbar from './components/Navbar/Navbar.jsx';
 import DialogsContainer from './components/Dialogs/DialogsContainer.jsx';
@@ -26,21 +26,20 @@ class App extends React.Component {
     }
 
     return (
-      <BrowserRouter>
-        <div className="app-wrapper">
-          <HeaderContainer />
-          <Navbar />
-          <div className="app-wrapper-content">
-            <Route path="/dialogs" render={() => <DialogsContainer  />} />
-            <Route path="/profile/:userId?" render={() =>  <ProfileContainer />} />
-            <Route path="/news" render={() => <News />} />
-            <Route path="/music" render={() => <Music />} />
-            <Route path="/setting" render={() => <Setting />} />
-            <Route path="/users" render={() => <UsersContainer />} />
-            <Route path="/login" render={() => <LoginPage />} />
-          </div>
+      <div className="app-wrapper">
+        <HeaderContainer />
+        <Navbar />
+        <div className="app-wrapper-content">
+          <Route path="/dialogs" render={() => <DialogsContainer />} />
+          <Route path="/profile/:userId?" render={() => <ProfileContainer />} />
+          <Route path="/news" render={() => <News />} />
+          <Route path="/music" render={() => <Music />} />
+          <Route path="/setting" render={() => <Setting />} />
+          <Route path="/users" render={() => <UsersContainer />} />
+          <Route path="/login" render={() => <LoginPage />} />
         </div>
-      </BrowserRouter>
+      </div>
+
     );
   }
 }
