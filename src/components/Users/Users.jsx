@@ -6,13 +6,13 @@ import User from './User';
 import s from './Users.module.css';
 
 const Users = ({currentPage, onPageChanged, pageSize, totalUsersCount, ...props}) => {
-
+    console.log('3');
     return (
       <div>
         <Paginator
          currentPage={currentPage} 
          onPageChanged={onPageChanged}
-         totalUsersCount={totalUsersCount}
+         totalItemsCount={totalUsersCount}
          pageSize={pageSize}
         />
         <div>
